@@ -1,0 +1,98 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Dilla University Theme Colors */
+
+.title-bar {
+    -fx-background-color: #2E8B57; /* Sea Green */
+    -fx-padding: 5px;
+}
+
+.window-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+}
+
+.window-button:hover {
+    -fx-background-color: #38a86a; /* Lighter Sea Green for hover */
+}
+
+.close-button:hover {
+    -fx-background-color: #e74c3c;
+}
+
+.main-container {
+    -fx-background-color: #f4f6f9; /* Light Grey-Blue background */
+}
+
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #2E8B57; /* Sea Green */
+}
+
+.form-container {
+    -fx-background-color: white;
+    -fx-padding: 30px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+.form-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2E8B57; /* Sea Green */
+}
+
+.form-field {
+    -fx-font-size: 14px;
+    -fx-pref-height: 40px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-focus-color: #F4C430; /* Gold for focus ring */
+    -fx-faint-focus-color: #F4C43033; /* Lighter Gold for faint focus */
+}
+
+.form-field:focused {
+    -fx-border-color: #F4C430; /* Gold border on focus */
+}
+
+.primary-button {
+    -fx-background-color: #2E8B57; /* Sea Green */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 5px;
+}
+
+.primary-button:hover {
+    -fx-background-color: #256f47; /* Darker Sea Green */
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2E8B57; /* Sea Green */
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.error-label {
+    -fx-text-fill: #e74c3c;
+}
+
+.info-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.glass-card {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);
+}
