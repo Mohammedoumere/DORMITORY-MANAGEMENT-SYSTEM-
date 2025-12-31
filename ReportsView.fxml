@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dormitory.controllers.ReportsViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Students Awaiting Room Assignment">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label text="This report lists all students who have been assigned a block but have not yet been assigned a room by a proctor." />
+        <TableView fx:id="reportTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colStudentId" prefWidth="120.0" text="Student ID" />
+                <TableColumn fx:id="colStudentName" prefWidth="200.0" text="Full Name" />
+                <TableColumn fx:id="colBlock" prefWidth="100.0" text="Assigned Block" />
+                <TableColumn fx:id="colStatus" prefWidth="150.0" text="Status" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</VBox>
