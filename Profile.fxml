@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" styleClass="main-container" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dormitory.controllers.ProfileViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label styleClass="section-title" text="Profile" />
+
+        <StackPane>
+            <children>
+                <Circle fx:id="profileCircle" radius="60" stroke="#2E8B57" strokeWidth="3" fill="LIGHTGRAY" />
+                <ImageView fx:id="profileImageView" fitHeight="115" fitWidth="115" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </StackPane>
+
+        <Button onAction="#changeProfilePicture" text="Change Picture" styleClass="secondary-button" />
+
+        <VBox maxWidth="400.0" spacing="10.0">
+            <Label styleClass="form-label" text="Full Name:" />
+            <TextField fx:id="profileUsernameField" styleClass="form-field" />
+            <Label styleClass="form-label" text="Email Address:" />
+            <TextField fx:id="profileEmailField" editable="false" style="-fx-background-color: #eeeeee;" styleClass="form-field" />
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <padding>
+                    <Insets top="10.0" />
+                </padding>
+                <Button onAction="#updateProfile" text="Update Name" styleClass="primary-button" />
+            </HBox>
+        </VBox>
+    </children>
+</VBox>
