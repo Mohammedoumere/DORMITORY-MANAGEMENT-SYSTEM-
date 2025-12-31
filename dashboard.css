@@ -1,0 +1,134 @@
+/* General Styles */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #f4f6f9; /* Light Grey-Blue background */
+}
+
+/* --- Title Bar --- */
+.title-bar {
+    -fx-background-color: #F4C430; /* Gold */
+    -fx-padding: 5px;
+}
+
+/* --- Left Navigation Sidebar --- */
+.nav-vbox {
+    -fx-background-color: #2E8B57; /* Sea Green */
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold; /* Make nav buttons bold by default */
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5;
+}
+
+.nav-button:hover {
+    -fx-background-color: #256f47; /* Darker Sea Green */
+    -fx-text-fill: white;
+}
+
+.nav-button-active {
+    -fx-background-color: #F4C430; /* Gold */
+    -fx-text-fill: #2E8B57; /* Sea Green text */
+    -fx-font-weight: bold;
+}
+
+/* --- Settings Navigation --- */
+.settings-nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #34495e; /* Dark Grey text */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5;
+}
+
+.settings-nav-button:hover {
+    -fx-background-color: #ecf0f1; /* Light grey on hover */
+}
+
+.settings-nav-button-active {
+    -fx-background-color: #2E8B57; /* Sea Green */
+    -fx-text-fill: white;
+}
+
+
+/* --- Content Area --- */
+.content-area {
+    -fx-background-color: #ecf0f1;
+}
+
+.section-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E8B57; /* Sea Green */
+}
+
+/* --- Tables --- */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2E8B57; /* Sea Green */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #e9ecef;
+}
+
+/* --- Forms --- */
+.form-field {
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-focus-color: #F4C430; /* Gold for focus ring */
+    -fx-faint-focus-color: #F4C43033; /* Lighter Gold for faint focus */
+}
+
+.primary-button {
+    -fx-background-color: #2E8B57; /* Sea Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 35px;
+    -fx-background-radius: 5;
+}
+
+.primary-button:hover {
+    -fx-background-color: #256f47; /* Darker Sea Green */
+}
+
+.secondary-button {
+    -fx-background-color: #F4C430; /* Gold */
+    -fx-text-fill: #2E8B57; /* Sea Green */
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #e0b42b; /* Darker Gold */
+}
+
+.gradient-circle {
+    -fx-fill: linear-gradient(135deg, #2E8B57 0%, #F4C430 100%);
+}
