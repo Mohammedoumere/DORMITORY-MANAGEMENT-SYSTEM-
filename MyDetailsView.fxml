@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dormitory.controllers.MyDetailsViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label styleClass="section-title" text="My Dormitory Details" />
+    <Label styleClass="info-label" text="Please complete your registration details below." />
+
+    <GridPane hgap="10.0" vgap="15.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="370.0" />
+        </columnConstraints>
+
+        <!-- Read-Only Fields -->
+        <Label styleClass="form-label" text="Student ID:" />
+        <TextField fx:id="studentIdField" editable="false" style="-fx-background-color: #ecf0f1;" GridPane.columnIndex="1" />
+
+        <Label styleClass="form-label" text="Full Name:" GridPane.rowIndex="1" />
+        <TextField fx:id="fullNameField" editable="false" style="-fx-background-color: #ecf0f1;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label styleClass="form-label" text="Email:" GridPane.rowIndex="2" />
+        <TextField fx:id="emailField" editable="false" style="-fx-background-color: #ecf0f1;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label styleClass="form-label" text="Block:" GridPane.rowIndex="3" />
+        <TextField fx:id="blockField" editable="false" style="-fx-background-color: #ecf0f1;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label styleClass="form-label" text="Room Number:" GridPane.rowIndex="4" />
+        <TextField fx:id="roomField" editable="false" style="-fx-background-color: #ecf0f1;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <!-- Editable Fields -->
+        <Label styleClass="form-label" text="Phone Number:" GridPane.rowIndex="5" />
+        <TextField fx:id="phoneField" promptText="09..." styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <Label styleClass="form-label" text="Age:" GridPane.rowIndex="6" />
+        <TextField fx:id="ageField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <Label styleClass="form-label" text="Gender:" GridPane.rowIndex="7" />
+        <ComboBox fx:id="genderCombo" prefWidth="300.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+        <Label styleClass="form-label" text="Year of Study:" GridPane.rowIndex="8" />
+        <ComboBox fx:id="yearCombo" prefWidth="300.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+        <Label styleClass="form-label" text="College:" GridPane.rowIndex="9" />
+        <ComboBox fx:id="collegeCombo" prefWidth="300.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+        <Label styleClass="form-label" text="Department:" GridPane.rowIndex="10" />
+        <ComboBox fx:id="departmentCombo" prefWidth="300.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+        <Label styleClass="form-label" text="Nationality:" GridPane.rowIndex="11" />
+        <ComboBox fx:id="nationalityCombo" prefWidth="300.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+        <Label styleClass="form-label" text="Region:" GridPane.rowIndex="12" />
+        <ComboBox fx:id="regionCombo" prefWidth="300.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+
+        <Label styleClass="form-label" text="City:" GridPane.rowIndex="13" />
+        <TextField fx:id="cityField" prefHeight="25.0" prefWidth="353.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+        <Label styleClass="form-label" text="Resident Full Name:" GridPane.rowIndex="14" />
+        <TextField fx:id="residentNameField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+
+        <Label styleClass="form-label" text="Resident Relation:" GridPane.rowIndex="15" />
+        <ComboBox fx:id="residentRelationCombo" prefWidth="300.0" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+
+        <Label styleClass="form-label" text="Resident Phone:" GridPane.rowIndex="16" />
+        <TextField fx:id="residentPhoneField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <Button onAction="#updateDetails" prefHeight="27.0" prefWidth="211.0" styleClass="primary-button" text="Update Details">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Button>
+</VBox>
