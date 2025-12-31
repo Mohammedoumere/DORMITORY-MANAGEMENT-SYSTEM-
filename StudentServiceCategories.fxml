@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="232.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+    <Label prefHeight="47.0" prefWidth="488.0" styleClass="section-title" text="   Student Management">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font></Label>
+    <Label prefHeight="43.0" prefWidth="451.0" styleClass="section-title" text="   Proctor Management">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Label>
+    <Label prefHeight="42.0" prefWidth="466.0" styleClass="section-title" text="   Room Management">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Label>
+    <Label prefHeight="52.0" prefWidth="455.0" styleClass="section-title" text="   Reports &amp; Analytics">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Label>
+</VBox>
