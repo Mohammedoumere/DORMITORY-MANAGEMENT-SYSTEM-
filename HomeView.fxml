@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" styleClass="main-container" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dormitory.controllers.HomeViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="welcomeLabel" styleClass="section-title" text="Dashboard Overview" />
+        <Label fx:id="proctorBlockInfoLabel" managed="false" visible="false" styleClass="info-label">
+            <font>
+                <Font name="System Italic" size="20.0" />
+            </font>
+        </Label>
+        <GridPane hgap="25.0" vgap="25.0" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <!-- Row 0: Student and Report Stats -->
+                <VBox fx:id="studentStatCard" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label fx:id="totalStudentsLabel" styleClass="stat-number-large" text="0" />
+                    <Label fx:id="totalStudentsDescLabel" text="Total Students" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="maleStudentCard" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label fx:id="maleStudentsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Male Students" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="femaleStudentCard" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Label fx:id="femaleStudentsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Female Students" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="reportStatCard" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                    <Label fx:id="totalReportsLabel" styleClass="stat-number-large" text="0" />
+                    <Label fx:id="totalReportsDescLabel" text="Total Reports" styleClass="stat-description-large" />
+                </VBox>
+
+                <!-- Row 1: Admin-Only Stats / Proctor Room Stats -->
+                <VBox fx:id="proctorStatCard" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label fx:id="totalProctorsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Total Proctors" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="maleProctorCard" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label fx:id="maleProctorsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Male Proctors" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="femaleProctorCard" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <Label fx:id="femaleProctorsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Female Proctors" styleClass="stat-description-large" />
+                </VBox>
+
+                <!-- Row 2: Block Stats -->
+                <VBox fx:id="blockStatCard1" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label fx:id="totalBlocksLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Total Blocks" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="blockStatCard2" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <Label fx:id="maleBlocksLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Male Blocks" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="blockStatCard3" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <Label fx:id="femaleBlocksLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Female Blocks" styleClass="stat-description-large" />
+                </VBox>
+
+                <!-- Overlapping cards for Proctor View -->
+                <VBox fx:id="roomStatCard1" visible="false" managed="false" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label fx:id="totalRoomsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Total Rooms in Block" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="roomStatCard2" visible="false" managed="false" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <Label fx:id="assignedStudentsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Students with Rooms" styleClass="stat-description-large" />
+                </VBox>
+                <VBox fx:id="roomStatCard3" visible="false" managed="false" styleClass="stat-card" alignment="CENTER" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <Label fx:id="availableRoomsLabel" styleClass="stat-number-large" text="0" />
+                    <Label text="Available Rooms" styleClass="stat-description-large" />
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+</VBox>
