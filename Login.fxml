@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="944.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dormitory.controllers.AuthController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="946.0" spacing="5" styleClass="title-bar">
+         <children>
+            <Region prefHeight="29.0" prefWidth="1042.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="minimizeButton" onAction="#minimizeApplication" prefHeight="25.0" prefWidth="38.0" styleClass="window-button" text="_" />
+            <Button fx:id="maximizeButton" onAction="#maximizeApplication" prefHeight="25.0" prefWidth="37.0" styleClass="window-button" text="[]" />
+            <Button fx:id="closeButton" onAction="#closeApplication" prefHeight="25.0" prefWidth="34.0" styleClass="window-button close-button" text="X" />
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="17.0" prefWidth="952.0" styleClass="title-bar">
+         <children>
+            <Label style="-fx-text-fill: white;" text="© 2024 Dormitory Management System" />
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="641.0" prefWidth="1086.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="928.0" spacing="30" styleClass="main-container">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="673.0" spacing="10">
+                     <children>
+                        <ImageView fitHeight="215.0" fitWidth="493.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/com/dormitory/images/Picture-1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text styleClass="form-title" text="Dormitory Management" textAlignment="CENTER" wrappingWidth="508.078125">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font></Text>
+                        <Text fill="#7f8c8d" text="Sign in to your account" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="920.0" spacing="20" styleClass="form-container">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="748.0" spacing="8">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="149.0" styleClass="form-label" text="User Type:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <ComboBox fx:id="userTypeCombo" maxHeight="30.0" maxWidth="-Infinity" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="302.0" promptText="Select user type" styleClass="form-field" />
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="755.0" spacing="8">
+                           <children>
+                              <Label styleClass="form-label" text="Email Address:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <TextField fx:id="loginEmail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="668.0" promptText="Enter email (@gmail.com)" styleClass="form-field" />
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="757.0" spacing="8">
+                           <children>
+                              <Label styleClass="form-label" text="Password:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <PasswordField fx:id="loginPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="672.0" promptText="Enter password" styleClass="form-field" />
+                              <StackPane>
+                                 <children>
+                                    <TextField fx:id="visiblePassword" managed="false" prefWidth="350.0" promptText="Enter password" styleClass="form-field" visible="false" />
+                                 </children>
+                              </StackPane>
+                              <CheckBox fx:id="showPasswordCheckBox" styleClass="form-label" text="Show Password" />
+                           </children>
+                        </VBox>
+                        <Label fx:id="errorLabel" styleClass="error-label" wrapText="true" />
+                        <Button onAction="#handleLogin" prefHeight="25.0" prefWidth="430.0" styleClass="primary-button" text="Sign In">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="13.0" />
+                           </font></Button>
+                        <Separator prefWidth="350.0" />
+                        <VBox alignment="CENTER" spacing="5">
+                           <children>
+                              <Label style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;" text="Note: Registration is handled by Student Service." />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>    </VBox>
+         </content>
+      </ScrollPane>
+   </right>
+</BorderPane>

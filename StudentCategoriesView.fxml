@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<VBox spacing="15.0" styleClass="main-container" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dormitory.controllers.StudentCategoriesController">
+    <children>
+        <Label styleClass="section-title" text="My Dormitory Category" />
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="150.0" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <!-- Dormitory Information -->
+            <Label styleClass="form-label" text="My Assignment" GridPane.columnSpan="2" />
+            <Label styleClass="form-label" text="Block:" GridPane.rowIndex="1" />
+            <Label fx:id="blockLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label styleClass="form-label" text="Room Number:" GridPane.rowIndex="2" />
+            <Label fx:id="roomLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Separator GridPane.columnSpan="2" GridPane.rowIndex="3" />
+
+            <!-- Proctor Information -->
+            <Label styleClass="form-label" text="My Proctor's Details" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Label styleClass="form-label" text="Proctor Name:" GridPane.rowIndex="5" />
+            <Label fx:id="proctorNameLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label styleClass="form-label" text="Proctor Phone:" GridPane.rowIndex="6" />
+            <Label fx:id="proctorPhoneLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label styleClass="form-label" text="Proctor Email:" GridPane.rowIndex="7" />
+            <Label fx:id="proctorEmailLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        </GridPane>
+    </children>
+</VBox>
